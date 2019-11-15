@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap");
+/**
+  * Variables
+ **/
+/**
+  * Basic Reset
+ **/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+  color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: #674baf;
+  background-image: url("../../images/bg-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-size: .80em;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/**
+  * Hero Button
+ **/
+.hero__intro a {
+  background: #fff;
+  color: #674baf;
+  text-decoration: none;
+  padding: .4em 4em;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #fff;
+  font-size: .65em;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hero__intro a:hover {
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/**
+  * Social Icons
+ **/
+.social {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.social a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.social a:nth-child(n+2) {
+  margin-left: 15px;
+}
+
+.social i {
+  border: 1px solid #fff;
+  padding: 6px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.social i:hover {
+  background: #fff;
+  border: 1px solid #fff;
+  color: #674baf;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: .75em;
+}
+
+/**
+  * Custom Styles
+ **/
+header {
+  display: -ms-grid;
+  display: grid;
+  justify-items: start;
+}
+
+header .logo {
+  padding-top: 1.5em;
+  width: 8em;
+}
+
+/**
+  * Hero Section Styles
+ **/
+.hero__intro {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+}
+
+.hero__intro .hero__img {
+  max-width: 100%;
+  -webkit-animation: transitionRight 1.2s ease-in;
+          animation: transitionRight 1.2s ease-in;
+}
+
+.hero__intro .hero__desc {
+  padding: 1em 0;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-animation: fadeAndScale 1.3s ease-in;
+          animation: fadeAndScale 1.3s ease-in;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.hero__intro .hero__desc h1 {
+  margin: 0;
+}
+
+.hero__intro .hero__desc span {
+  font-weight: 700;
+}
+
+/**
+  * Footer Section Styles
+ **/
+footer {
+  display: -ms-grid;
+  display: grid;
+}
+
+footer .attribution {
+  place-self: center;
+  font-size: .90em;
+}
+
+footer .attribution a {
+  color: #fff;
+}
+
+footer .attribution a:hover {
+  opacity: .5;
+  -webkit-transition: ease-in .3s;
+  transition: ease-in .3s;
+}
+
+/**
+  * Media Queries
+ **/
+@media (min-width: 768px) {
+  html {
+    font-size: 110%;
+  }
+  .container {
+    width: 90%;
+  }
+  .hero__intro {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2em;
+    -ms-grid-columns: 5fr 4fr;
+        grid-template-columns: 5fr 4fr;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+        grid-template-areas: "img desc";
+  }
+  .hero__img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: img;
+  }
+  .hero__desc {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: desc;
+    justify-items: start;
+    text-align: left;
+  }
+  .social {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+}
+
+/**
+  * Animation
+ **/
+/* For Hero Description*/
+@-webkit-keyframes fadeAndScale {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.75, 0.75, 1);
+            transform: scale3d(0.75, 0.75, 1);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes fadeAndScale {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.75, 0.75, 1);
+            transform: scale3d(0.75, 0.75, 1);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+/* For Hero Image*/
+@-webkit-keyframes transitionRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes transitionRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */

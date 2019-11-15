@@ -1,0 +1,143 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: .75em;
+}
+
+/**
+  * Custom Styles
+ **/
+
+ header {
+    display: grid;
+    justify-items: start;
+
+    .logo {
+        
+       padding-top: 1.5em;
+       width: 8em;
+    }
+} 
+
+/**
+  * Hero Section Styles
+ **/
+.hero__intro {
+       display: grid;
+       grid-gap: 1em;
+
+    .hero__img {
+        max-width: 100%;
+        animation: transitionRight 1.2s ease-in;
+        
+    }
+
+    .hero__desc {
+        padding: 1em 0;
+        justify-self: center;
+        align-self: center;
+        animation: fadeAndScale 1.3s ease-in;
+        transform-origin: center center;
+
+        h1 {
+            margin: 0;
+        }
+
+        span {
+            font-weight: 700;
+        }    
+    }
+}
+
+/**
+  * Footer Section Styles
+ **/
+footer {
+    display: grid;
+    
+    .attribution {
+        place-self: center;
+        font-size: .90em;
+       
+        a {
+            color: $secondary__clr;
+            
+            &:hover {
+                opacity: .5;
+                transition: ease-in .3s;
+            }
+        }
+    }
+}
+    
+
+/**
+  * Media Queries
+ **/
+ 
+ @media (min-width: 768px) {
+
+    html {
+        font-size: 110%;
+    }
+     .container {
+         width: 90%;
+     }
+
+    .hero__intro {
+        display: grid;
+        grid-gap: 2em;
+        grid-template-columns: 5fr 4fr;
+        justify-items: center;
+        align-items: center;
+
+        grid-template-areas: 
+        "img desc";
+    }
+
+    .hero__img {
+        grid-area: img;
+    }
+
+    .hero__desc {
+        display: grid;
+        grid-area: desc;
+        justify-items: start;
+        text-align: left;
+    }
+
+    .social {
+        justify-self: end;
+    }
+ }
+
+ /**
+  * Animation
+ **/
+
+/* For Hero Description*/
+@keyframes fadeAndScale {
+    from {
+        opacity: 0;
+        transform: scale3d(.75, .75, 1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+} 
+
+/* For Hero Image*/
+@keyframes transitionRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} 

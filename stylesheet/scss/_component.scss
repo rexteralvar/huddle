@@ -1,0 +1,51 @@
+/**
+  * Hero Button
+ **/
+.hero__intro a {
+    background: $secondary__clr;
+    color: $primary__clr;
+    text-decoration: none;
+    padding: .4em 4em;
+    border-radius: 20px;
+    font-family: $primary__font;
+    border: 2px solid $secondary__clr;
+    font-size: .65em;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+    &:hover {
+        background: none;
+        color: $secondary__clr;
+        border: 2px solid $secondary__clr;
+    }
+}
+
+
+/**
+  * Social Icons
+ **/
+.social {
+    justify-self: center;
+    
+    a {
+        text-decoration: none;
+        color: $secondary__clr;
+
+        &:nth-child(n+2) {
+            margin-left: 15px;
+           }        
+    }
+
+    i {
+        border: 1px solid $secondary__clr;
+        padding: 6px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px; 
+        &:hover {
+            background: $secondary__clr;
+            border: 1px solid $secondary__clr;
+            color: $primary__clr;
+        }  
+    }
+ }
