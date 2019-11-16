@@ -1,13 +1,18 @@
 # Huddle Landing Page
-#### Credits to: Frontendmentor.io (Layout owner)
+This is a simple static landing page built from scratch which demonstrates my skills for the technologies being used. Basically, what I did is I converted the layout given by frontendmentor into a working live site.
 
-## This is a simple static landing page which demonstrates my skills for the below technologies. Basically, what I did is I converted the layout given by frontendmentor into a working live site.
 
-Technologies used for this project:
+## Technologies used
 +  HTML5 - for markup
-+  CSS3(SaSS) - used to organize styling and speed up the development
++  CSS3- used SaSS and CSS Grid for this site
++  Fontawesome - icon source
 +  GitHub - hosted the site
-+  VS Code - code editor being used for this project
++  VS Code - code editor being used
 
+## Author
+[Rexter Alvar](https://github.com/rexteralvar)
 
-###### Developer: Rexter Alvar
+## Acknowledgements
+I'd like to give thanks to the ff. who have contributed to this project.
++ [Frontendmentor.io](https://www.frontendmentor.io/)
++ [CSS-tricks](https://css-tricks.com/) 
